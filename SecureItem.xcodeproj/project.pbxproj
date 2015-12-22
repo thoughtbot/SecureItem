@@ -15,6 +15,7 @@
 		F836B2931C29D67600B4ABDF /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F836B2921C29D67600B4ABDF /* KeychainAccess.swift */; };
 		F836B29D1C29D75900B4ABDF /* SecureItem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F826017D1C29CFD700DE9F13 /* SecureItem.framework */; };
 		F836B2A71C29D78200B4ABDF /* SecureItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F836B2A51C29D78200B4ABDF /* SecureItemTests.swift */; };
+		F8E299551C2A05240077A6AC /* InMemoryKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E299541C2A05240077A6AC /* InMemoryKeychain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		F836B2981C29D75900B4ABDF /* SecureItemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecureItemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F836B2A41C29D78200B4ABDF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F836B2A51C29D78200B4ABDF /* SecureItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureItemTests.swift; sourceTree = "<group>"; };
+		F8E299541C2A05240077A6AC /* InMemoryKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMemoryKeychain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		F836B27E1C29D06400B4ABDF /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F8E299541C2A05240077A6AC /* InMemoryKeychain.swift */,
 				F836B2921C29D67600B4ABDF /* KeychainAccess.swift */,
 				F836B2901C29D62800B4ABDF /* Keychain.swift */,
 				F836B2891C29D5AC00B4ABDF /* SecureItem.swift */,
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E299551C2A05240077A6AC /* InMemoryKeychain.swift in Sources */,
 				F836B28A1C29D5AC00B4ABDF /* SecureItem.swift in Sources */,
 				F836B2931C29D67600B4ABDF /* KeychainAccess.swift in Sources */,
 				F836B2911C29D62800B4ABDF /* Keychain.swift in Sources */,

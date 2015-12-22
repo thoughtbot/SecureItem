@@ -2,19 +2,6 @@ import XCTest
 import SecureItem
 import Result
 
-class FakeKeychain: KeychainAccess {
-    var storage = [String : AnyObject]()
-
-    func objectForKey(key: String!) -> AnyObject! {
-        return storage[key]
-
-    }
-
-    func setObject(object: AnyObject!, forKey key: String!) {
-        storage[key] = object
-    }
-}
-
 struct Token {
     let value: String
 
@@ -41,7 +28,7 @@ extension Token: SecureItem {
 
 class SecureItemTests: XCTestCase {
     func testSave() {
-        let keychain = FakeKeychain()
+        let keychain = InMemoryKeychain()
         Keychain.keychain = keychain
 
         let token = Token("Sup")
@@ -54,7 +41,7 @@ class SecureItemTests: XCTestCase {
     }
 
    func testDelete() {
-        let keychain = FakeKeychain()
+        let keychain = InMemoryKeychain()
         Keychain.keychain = keychain
 
         let token = Token("hi")
@@ -64,12 +51,12 @@ class SecureItemTests: XCTestCase {
         Token.delete()
 
         let saved = keychain.storage["token"]
-    
+
         XCTAssert(saved == nil)
     }
 
     func testReadSuccessful() {
-        let keychain = FakeKeychain()
+        let keychain = InMemoryKeychain()
         Keychain.keychain = keychain
 
         let token = Token("hi")
@@ -82,7 +69,7 @@ class SecureItemTests: XCTestCase {
     }
 
     func testReadFailure() {
-        let keychain = FakeKeychain()
+        let keychain = InMemoryKeychain()
         Keychain.keychain = keychain
 
         let token = Token.read()
