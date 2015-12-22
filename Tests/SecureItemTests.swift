@@ -3,77 +3,77 @@ import SecureItem
 import Result
 
 struct Token {
-    let value: String
+  let value: String
 
-    init(_ value: String)  {
-        self.value = value
-    }
+  init(_ value: String)  {
+    self.value = value
+  }
 }
 
 extension Token: SecureItem {
-    static var key = "token"
+  static var key = "token"
 
-    var data: AnyObject {
-        return value
-    }
+  var data: AnyObject {
+    return value
+  }
 
-    init?(data: AnyObject) {
-        if let value = data as? String {
-            self.value = value
-        } else {
-            return nil
-        }
+  init?(data: AnyObject) {
+    if let value = data as? String {
+      self.value = value
+    } else {
+      return nil
     }
+  }
 }
 
 class SecureItemTests: XCTestCase {
-    func testSave() {
-        let keychain = InMemoryKeychain()
-        Keychain.keychain = keychain
+  func testSave() {
+    let keychain = InMemoryKeychain()
+    Keychain.keychain = keychain
 
-        let token = Token("Sup")
+    let token = Token("Sup")
 
-        token.save()
+    token.save()
 
-        let saved = keychain.storage["token"] as! String
+    let saved = keychain.storage["token"] as! String
 
-        XCTAssertEqual(token.value, saved)
-    }
+    XCTAssertEqual(token.value, saved)
+  }
 
-   func testDelete() {
-        let keychain = InMemoryKeychain()
-        Keychain.keychain = keychain
+  func testDelete() {
+    let keychain = InMemoryKeychain()
+    Keychain.keychain = keychain
 
-        let token = Token("hi")
+    let token = Token("hi")
 
-        token.save()
+    token.save()
 
-        Token.delete()
+    Token.delete()
 
-        let saved = keychain.storage["token"]
+    let saved = keychain.storage["token"]
 
-        XCTAssert(saved == nil)
-    }
+    XCTAssert(saved == nil)
+  }
 
-    func testReadSuccessful() {
-        let keychain = InMemoryKeychain()
-        Keychain.keychain = keychain
+  func testReadSuccessful() {
+    let keychain = InMemoryKeychain()
+    Keychain.keychain = keychain
 
-        let token = Token("hi")
+    let token = Token("hi")
 
-        token.save()
+    token.save()
 
-        let readToken = Token.read()
+    let readToken = Token.read()
 
-        XCTAssertEqual(token.value, readToken.value!.value)
-    }
+    XCTAssertEqual(token.value, readToken.value!.value)
+  }
 
-    func testReadFailure() {
-        let keychain = InMemoryKeychain()
-        Keychain.keychain = keychain
+  func testReadFailure() {
+    let keychain = InMemoryKeychain()
+    Keychain.keychain = keychain
 
-        let token = Token.read()
+    let token = Token.read()
 
-        XCTAssertEqual(KeychainError.ValueNotFound, token.error!)
-    }
+    XCTAssertEqual(KeychainError.ValueNotFound, token.error!)
+  }
 }

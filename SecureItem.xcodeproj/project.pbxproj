@@ -73,7 +73,9 @@
 				F836B2A31C29D78200B4ABDF /* Tests */,
 				F826017E1C29CFD700DE9F13 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		F826017E1C29CFD700DE9F13 /* Products */ = {
 			isa = PBXGroup;
@@ -430,6 +432,7 @@
 				F836B2A21C29D75900B4ABDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
