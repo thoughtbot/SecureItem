@@ -8,12 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		F836B27F1C29D06A00B4ABDF /* SecureItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F836B27D1C29D05F00B4ABDF /* SecureItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F836B28A1C29D5AC00B4ABDF /* SecureItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F836B2891C29D5AC00B4ABDF /* SecureItem.swift */; };
+		F836B28D1C29D5E500B4ABDF /* LUKeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F836B28B1C29D5E500B4ABDF /* LUKeychainAccess.framework */; };
+		F836B28E1C29D5E500B4ABDF /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F836B28C1C29D5E500B4ABDF /* Result.framework */; };
+		F836B2911C29D62800B4ABDF /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F836B2901C29D62800B4ABDF /* Keychain.swift */; };
+		F836B2931C29D67600B4ABDF /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F836B2921C29D67600B4ABDF /* KeychainAccess.swift */; };
+		F836B29D1C29D75900B4ABDF /* SecureItem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F826017D1C29CFD700DE9F13 /* SecureItem.framework */; };
+		F836B2A71C29D78200B4ABDF /* SecureItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F836B2A51C29D78200B4ABDF /* SecureItemTests.swift */; };
+		F8E299551C2A05240077A6AC /* InMemoryKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E299541C2A05240077A6AC /* InMemoryKeychain.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F836B29E1C29D75900B4ABDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F82601741C29CFD700DE9F13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F826017C1C29CFD700DE9F13;
+			remoteInfo = SecureItem;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F826017D1C29CFD700DE9F13 /* SecureItem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SecureItem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F836B27C1C29D05F00B4ABDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F836B27D1C29D05F00B4ABDF /* SecureItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecureItem.h; sourceTree = "<group>"; };
+		F836B2891C29D5AC00B4ABDF /* SecureItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureItem.swift; sourceTree = "<group>"; };
+		F836B28B1C29D5E500B4ABDF /* LUKeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LUKeychainAccess.framework; path = "Carthage/Checkouts/LUKeychainAccess/build/Debug-iphoneos/LUKeychainAccess.framework"; sourceTree = "<group>"; };
+		F836B28C1C29D5E500B4ABDF /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "Carthage/Checkouts/Result/build/Debug-iphoneos/Result.framework"; sourceTree = "<group>"; };
+		F836B2901C29D62800B4ABDF /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		F836B2921C29D67600B4ABDF /* KeychainAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
+		F836B2981C29D75900B4ABDF /* SecureItemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecureItemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F836B2A41C29D78200B4ABDF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F836B2A51C29D78200B4ABDF /* SecureItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureItemTests.swift; sourceTree = "<group>"; };
+		F8E299541C2A05240077A6AC /* InMemoryKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMemoryKeychain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +48,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F836B28D1C29D5E500B4ABDF /* LUKeychainAccess.framework in Frameworks */,
+				F836B28E1C29D5E500B4ABDF /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F836B2951C29D75900B4ABDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F836B29D1C29D75900B4ABDF /* SecureItem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,14 +69,19 @@
 			children = (
 				F836B27E1C29D06400B4ABDF /* Source */,
 				F836B27B1C29D05F00B4ABDF /* Resources */,
+				F836B28F1C29D5EA00B4ABDF /* Frameworks */,
+				F836B2A31C29D78200B4ABDF /* Tests */,
 				F826017E1C29CFD700DE9F13 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		F826017E1C29CFD700DE9F13 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				F826017D1C29CFD700DE9F13 /* SecureItem.framework */,
+				F836B2981C29D75900B4ABDF /* SecureItemTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,8 +98,30 @@
 		F836B27E1C29D06400B4ABDF /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F8E299541C2A05240077A6AC /* InMemoryKeychain.swift */,
+				F836B2921C29D67600B4ABDF /* KeychainAccess.swift */,
+				F836B2901C29D62800B4ABDF /* Keychain.swift */,
+				F836B2891C29D5AC00B4ABDF /* SecureItem.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		F836B28F1C29D5EA00B4ABDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F836B28B1C29D5E500B4ABDF /* LUKeychainAccess.framework */,
+				F836B28C1C29D5E500B4ABDF /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F836B2A31C29D78200B4ABDF /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F836B2A41C29D78200B4ABDF /* Info.plist */,
+				F836B2A51C29D78200B4ABDF /* SecureItemTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,16 +156,38 @@
 			productReference = F826017D1C29CFD700DE9F13 /* SecureItem.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F836B2971C29D75900B4ABDF /* SecureItemTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F836B2A01C29D75900B4ABDF /* Build configuration list for PBXNativeTarget "SecureItemTests" */;
+			buildPhases = (
+				F836B2941C29D75900B4ABDF /* Sources */,
+				F836B2951C29D75900B4ABDF /* Frameworks */,
+				F836B2961C29D75900B4ABDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F836B29F1C29D75900B4ABDF /* PBXTargetDependency */,
+			);
+			name = SecureItemTests;
+			productName = SecureItemTests;
+			productReference = F836B2981C29D75900B4ABDF /* SecureItemTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F82601741C29CFD700DE9F13 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = thoughtbot;
 				TargetAttributes = {
 					F826017C1C29CFD700DE9F13 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					F836B2971C29D75900B4ABDF = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -119,12 +205,20 @@
 			projectRoot = "";
 			targets = (
 				F826017C1C29CFD700DE9F13 /* SecureItem */,
+				F836B2971C29D75900B4ABDF /* SecureItemTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F826017B1C29CFD700DE9F13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F836B2961C29D75900B4ABDF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -138,10 +232,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E299551C2A05240077A6AC /* InMemoryKeychain.swift in Sources */,
+				F836B28A1C29D5AC00B4ABDF /* SecureItem.swift in Sources */,
+				F836B2931C29D67600B4ABDF /* KeychainAccess.swift in Sources */,
+				F836B2911C29D62800B4ABDF /* Keychain.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F836B2941C29D75900B4ABDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F836B2A71C29D78200B4ABDF /* SecureItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F836B29F1C29D75900B4ABDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F826017C1C29CFD700DE9F13 /* SecureItem */;
+			targetProxy = F836B29E1C29D75900B4ABDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F82601831C29CFD700DE9F13 /* Debug */ = {
@@ -236,6 +350,26 @@
 		F82601861C29CFD700DE9F13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.SecureItem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F82601871C29CFD700DE9F13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -248,22 +382,25 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		F82601871C29CFD700DE9F13 /* Release */ = {
+		F836B2A11C29D75900B4ABDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Resources/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.SecureItem;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.SecureItemTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F836B2A21C29D75900B4ABDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.SecureItemTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -284,6 +421,15 @@
 			buildConfigurations = (
 				F82601861C29CFD700DE9F13 /* Debug */,
 				F82601871C29CFD700DE9F13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F836B2A01C29D75900B4ABDF /* Build configuration list for PBXNativeTarget "SecureItemTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F836B2A11C29D75900B4ABDF /* Debug */,
+				F836B2A21C29D75900B4ABDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

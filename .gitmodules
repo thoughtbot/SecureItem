@@ -1,0 +1,6 @@
+[submodule "Carthage/Checkouts/LUKeychainAccess"]
+	path = Carthage/Checkouts/LUKeychainAccess
+	url = https://github.com/TheLevelUp/LUKeychainAccess.git
+[submodule "Carthage/Checkouts/Result"]
+	path = Carthage/Checkouts/Result
+	url = https://github.com/antitypical/Result.git
